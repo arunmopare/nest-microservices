@@ -1,5 +1,5 @@
 import { Type } from 'class-transformer';
-import { IsDate, IsMongoId, IsString, IsNotEmpty } from 'class-validator';
+import { IsDate, IsString, IsNotEmpty } from 'class-validator';
 
 export class CreateReservationDto {
   @IsDate()
