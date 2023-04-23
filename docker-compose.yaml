@@ -6,7 +6,17 @@ services:
       target: development
     command: pnpm run start:dev reservations
     ports:
-      - '3003:3003'
+      - '3005:3005'
+    volumes:
+      - .:/usr/src/app
+  auth: 
+    build:
+      context: .
+      dockerfile: ./apps/auth/DockerFile
+      target: development
+    command: pnpm run start:dev auth
+    ports:
+      - '3006:3006'
     volumes:
       - .:/usr/src/app
   mongo:
